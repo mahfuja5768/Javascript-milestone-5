@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    #fruits {
+      color: cadetblue;
+    }
+    .dark {
+      color: gray;
+    }
+  </style>
+  <body>
+    <section>
+      <h1 id="fruits">fruits I like</h1>
+      <ul>
+        <li>kathlichu</li>
+        <li>berry</li>
+        <li>kiwi</li>
+      </ul>
+    </section>
+    <section>
+      <h1 id="fav-places">places I want to visit</h1>
+      <ul>
+        <li>swizerland</li>
+        <li>greece</li>
+        <li>dubai</li>
+      </ul>
+    </section>
+    <section>
+      <h1 id="weather">weather I like</h1>
+      <ul>
+        <li class="dark">rainy</li>
+        <li class="dark">gloomy</li>
+        <li class="dark">wintery</li>
+      </ul>
+    </section>
+    <script>
+      // const allHeadings = document.getElementsByTagName('h1'); ///tagName
+      // for(const h1 of allHeadings){
+      //     console.log(h1.innerText);
+      // }
+      // const lists = document.getElementsByTagName('li');
+      // for(const li of lists){
+      //     console.log(li.innerText);
+      // }
+
+      // const fruity = document.getElementsByClassName('dark');
+      // for(const dark of fruity){
+      //     console.log(dark.innerText);
+      // }
+
+      // const weather = document.getElementsByClassName('dark');
+      // console.log(weather);
+
+      const places = document.getElementById("fav-places");
+      places.innerText = "loving to go there";
+    </script>
+  </body>
+</html>
