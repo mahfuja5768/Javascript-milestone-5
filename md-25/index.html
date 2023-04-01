@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js dom events</title>
+</head>
+<body>
+    <h1 id="title-tooltip" onclick="console.log('I am clicked')">Lets learn some DOM events!!</h1>
+    <button onclick="console.log('Hello')">Click Me</button>
+    <br>
+    <!-- //option 1// -->
+    <button onclick="document.body.style.backgroundColor='green'">click me to creat the bg green</button>
+    <button onclick="makeYellow()">click me to creat the bg yellow</button>
+    <button id="make-blue" >click me to creat the bg Blue</button>
+    <button id="make-purple" >click me to creat the bg purple</button>
+    <button id="make-pink" >click me to creat the bg pink</button>
+    <button id="make-gray" >click me to creat the bg gray</button>
+    <button id="make-goldenrod">click me to creat the bg goldenrod</button>
+    <br>
+    <h3 id="handle-status">Default text</h3>
+    <button onclick="handleOnClick()" >handle event by add on click function</button>
+    <button id="event-listener" >handle event by add event-listener function</button>
+    <script src="events.js"></script>
+    <script>
+        //option 2
+        function makeYellow(){
+            document.body.style.backgroundColor='yellow';
+            document.body.style.color='black';
+        }
+        //option 3
+        const makeBlueButton = document.getElementById('make-blue');
+        console.log(makeBlueButton);
+        makeBlueButton.onclick = makeBlue;
+          
+          function makeBlue(){
+            document.body.style.backgroundColor='blue';
+            document.body.style.color='white';
+          }
+        //option 4
+        const makePurpleButton = document.getElementById('make-purple');
+        makePurpleButton.onclick = function makeBlue(){
+            document.body.style.backgroundColor='purple';
+            document.body.style.color='white';
+          }
+        //option 5
+        const makePink = document.getElementById('make-pink');
+        makePink.addEventListener('click', makePinkButton)    /////////addEventListener
+        function makePinkButton(){
+            document.body.style.backgroundColor = 'pink'
+        }
+        //option 5
+        const makeGray = document.getElementById('make-gray');
+        makeGray.addEventListener('click', function makeGrayButton(){
+            document.body.style.backgroundColor = 'gray';
+            document.body.style.color='white';
+        })
+        //option 6
+        document.getElementById('make-goldenrod').addEventListener('click', function makeGoldenrodButton(){
+            document.body.style.backgroundColor = 'goldenrod';
+            document.body.style.color='purple';
+        })
+        /*  add margin*/
+        const addMargin = document.getElementById('make-goldenrod');
+        addMargin.style.marginBottom = '20px';
+
+        //button: option 1
+        function handleOnClick(){
+            const handleStatus = document.getElementById('handle-status')
+            handleStatus.innerText = 'Status changed by on click function'
+        }
+        //button: option 2
+        document.getElementById('event-listener').addEventListener('click', function (){ ///function er name na thakle take annonimous function bole
+            const handleStatus = document.getElementById('handle-status')
+            handleStatus.innerText = 'Status changed by event-listener function'
+        })
+    </script>
+</body>
+</html>
