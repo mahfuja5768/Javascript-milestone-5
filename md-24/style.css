@@ -1,0 +1,9 @@
+.text-center{
+    text-align: center;
+}
+.large-text{
+    font-size: 30px;
+}
+#places{
+    background-color: burlywood !important;
+}
