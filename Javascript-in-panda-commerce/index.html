@@ -115,13 +115,13 @@
     <div class="container shoes" id="shoes">
       <h3>Shoes</h3>
       <div class="card-deck">
-        <div class="card">
+        <div id="js-card" class="card">
           <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Supply 350</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional.</p>
             <h5>$120</h5>
-            <button class="buy-now-button">Buy Now >></button>
+            <button  id="buy-btn"  class="buy-now-button">Buy Now >></button>
           </div>
         </div>
         <div class="card">
@@ -184,21 +184,24 @@
       </div>
     </div>
     
-    <div class="container d-flex align-items-center justify-content-center orange-bg" id="subscribe">
-      <div>
-        <h3>LET'S STAY IN TOUCH</h3>
-        <h6>Get updates on sales, specials and more</h6>
-        <input class="form-control" type="text">
-        <button class="buy-now-button">SUBMIT</button>
+    <div id="chng-bg">
+      <div class="container d-flex align-items-center justify-content-center orange-bg" id="subscribe">
+        <div>
+          <h3>LET'S STAY IN TOUCH</h3>
+          <h6>Get updates on sales, specials and more</h6>
+          <input id="input-text" class="form-control" type="text">
+          <button id="submit-btn" class="buy-now-button" disabled >SUBMIT</button>
+        </div>
       </div>
     </div>
 
     <footer>
       <small> ©2020. Panda Commerce. All rights reserved. Sofia, Bulgaria. </small>
     </footer>
-
+    
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
