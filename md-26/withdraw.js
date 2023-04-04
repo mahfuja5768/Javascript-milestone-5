@@ -6,15 +6,20 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const withdrawField = document.getElementById('withdraw-field');
     const previousWithdrawString = withdrawField.innerText;
     const previousWithdrawAmount = parseFloat(previousWithdrawString );
-    const totalWithdrawAmount = previousWithdrawAmount + newWithdrawAmount;
-    withdrawField.innerText = totalWithdrawAmount;
     inputWithdrawAmount.value = ''
 
     //balance part:
     const balanceField = document.getElementById('balance-field');
     const balanceFieldString = balanceField.innerText;
     const previousBalanceAmount = parseFloat(balanceFieldString);
-    const newTotalBalance = previousBalanceAmount - totalWithdrawAmount;
+    if(newWithdrawAmount > previousBalanceAmount){
+        alert(`Sorry! your account has not that much money.`)
+    }
+    else{
+    const totalWithdrawAmount = previousWithdrawAmount + newWithdrawAmount;
+    withdrawField.innerText = totalWithdrawAmount;
+    const newTotalBalance = previousBalanceAmount - newWithdrawAmount;
     balanceField.innerText = newTotalBalance;
+    }
 
 });
