@@ -21,4 +21,4 @@ function calculateSumTotal(){
     const finalTotal = currentSubTotal + taxTotal;
     setTextElementById('final-total', finalTotal)
 }
- 
+ ///////////

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mt-5">
+    <main class="bg-slate-300 mx-auto px-2 pb-10 pt-3 w-4/12 rounded-xl">
+      <header>
+        <h1 class="text-5xl text-center mt-6 mb-10 font-bold text-lime-900">
+          Money Moster
+        </h1>
+      </header>
+      <section class="text-2xl font-semibold">
+        <h1 class="text-3xl font-bold text-lime-900 text-center mb-4">
+          Income
+        </h1>
+        <div class="text-center">
+          <div class="grid grid-cols-3 gap-1 mb-5 ps-10">
+            <h2>Income:</h2>
+            <input id="income-amount" class="ps-3" value="10000" type="text" />
+          </div>
+        </div>
+        <h1 class="text-3xl font-bold text-lime-900 text-center mb-5">
+          Expenses
+        </h1>
+        <div class="text-center">
+          <div class="grid grid-cols-3 gap-2 mb-4 ps-10">
+            <h2>Food:</h2>
+            <input id="food-expenses" class="ps-3" value="3000" type="text" />
+          </div>
+          <div class="grid grid-cols-3 gap-1 mb-4 ps-10">
+            <h2>Rent:</h2>
+            <input id="rent-expenses" class="ps-3" value="2000" type="text" />
+          </div>
+          <div class="grid grid-cols-3 gap-1 mb-4 ps-10">
+            <h2>Clothes:</h2>
+            <input id="clothes-expenses" class="ps-3" value="500" type="text" />
+          </div>
+          <button id="calculate-btn"
+            class="mb-10 bg-lime-900 px-7 py-1 mt-5 text-white font-semibold rounded-md hover:bg-sky-500"
+          >
+            Calculate
+          </button>
+        </div>
+        <div class="text-center">
+          <h1 class="text-3md font-bold text-lime-900 mb-3">
+            Total Expenses: <span id="total-expenses"></span>
+          </h1>
+          <h1 class="text-3md font-bold text-lime-900 mb-10">
+            Balance: <span id="balance-amount"></span>
+          </h1>
+        </div>
+        <div class="text-center">
+          <div class="grid grid-cols-6 mb-4 ps-20">
+            <h2>Save:</h2>
+            <input class="text-center" type="text" value="20" />
+            %
+            <button id="save-btn"
+              class="bg-lime-900 px-2 py-1 text-white font-semibold rounded-md hover:bg-sky-500"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="mb-10 text-center">
+          <h1 class="font-bold text-lime-900 mb-3">
+            Saving Amount: <span id="saving-amount"></span>
+          </h1>
+          <h1 class="font-bold text-lime-900 mb-10">
+            Remaining Balance: <span id="remaining-balance"></span>
+          </h1>
+        </div>
+      </section>
+    </main>
+    <script src="utilities.js"></script>
+    <script src="money.js"></script>
+  </body>
+</html>
