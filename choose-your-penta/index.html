@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your penta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-section dream-bg">
+      <div class="header-pic">
+        <img src="images/header pic.png" alt="" />
+      </div>
+      <div class="text">
+        <h1>Choose Your Best Penta</h1>
+        <p>
+          You can specify your club fee for the player and also demand a sell-on
+          percentage <br> to make sure you get the most out of your transfer.
+        </p>
+      </div>
+    </header>
+
+    <main class="main-section">
+      <div class="container">
+        <div class="cards">
+          <div class="image-section img-one"></div>
+          <div class="content">
+            <h1 id="player-1">Sergio Ramos</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-1">Select</button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image-section img-two"></div>
+          <div class="content">
+            <h1 id="player-2">Neymar Jr</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-2">Select</button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image-section img-three"></div>
+          <div class="content">
+            <h1 id="player-3">Lionel Messi</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-3">Select</button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image-section img-four"></div>
+          <div class="content">
+            <h1 id="player-4">Renato Sanches</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-4">Select</button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image-section img-five"></div>
+          <div class="content">
+            <h1 id="player-5">Vitor Machado</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-5">Select</button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image-section img-six"></div>
+          <div class="content">
+            <h1 id="player-6">Kylian Mbappe</h1>
+            <p>36 Goals . 120 Assist</p>
+            <button id="select-btn-6">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-2">
+        <div class="child-1">
+          <h1>Selected-5</h1>
+          <hr />
+          <div>
+            <ol id="list-container"></ol>
+          </div>
+        </div>
+        <div class="child-2">
+          <h1>Budget</h1>
+          <hr />
+          <div class="devided">
+            <p>Per Player</p>
+            <input id="player-expense-input" value="1000" type="text" />
+          </div>
+          <button id="calculate-btn">Calculate</button>
+          <p>Player Expenses : $<span id="player-expenses"></span></p>
+          <div class="devided">
+            <p>Manager</p>
+            <input id="manager-price-input" value="2000" type="text" />
+          </div>
+          <div class="devided">
+            <p>Coach</p>
+            <input id="couch-price-input" value="4000" type="text" />
+          </div>
+          <button id="calculate-total-btn">Calculate</button>
+          <p>
+            Total :
+            <span id="gap"
+              ><span id="sign">$</span> <span id="final-total"> </span
+            ></span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="utilities.js"></script>
+    <script src="budget.js"></script>
+    <script src="selected.js"></script>
+  </body>
+</html>
